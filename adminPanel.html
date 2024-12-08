@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/panel.css">
+</head>
+<body>
+  <div id="login">
+    <h2>Admin Panel Girişi</h2>
+    <input type="text" id="username" placeholder="Kullanıcı Adı (admin1)">
+    <input type="password" id="password" placeholder="Şifre (1234)">
+    <button onclick="login()">Giriş Yap</button>
+    <p id="loginMessage"></p>
+  </div>
+
+  <div id="adminPanel" style="display: none;">
+    <header>
+      <h1>Admin Panel</h1>
+      <button onclick="logout()">Çıkış Yap</button>
+    </header>
+
+    <section id="dashboard">
+      <h2>Konser Biletleri</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Konser Adı</th>
+            <th>Tarih</th>
+            <th>Fiyat</th>
+            <th>İşlemler</th>
+          </tr>
+        </thead>
+        <tbody id="ticketTable">
+          <!-- Dinamik içerik buraya gelecek -->
+        </tbody>
+      </table>
+
+      <h3>Yeni Bilet Ekle</h3>
+      <input type="text" id="newConcertName" placeholder="Konser Adı">
+      <input type="date" id="newConcertDate">
+      <input type="number" id="newConcertPrice" placeholder="Fiyat">
+      <button onclick="addTicket()">Ekle</button>
+    </section>
+
+    <section id="charts">
+      <h2>İstatistikler</h2>
+      <canvas id="salesChart"></canvas>
+    </section>
+  </div>
+
+  <script src="js/giriscikis.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

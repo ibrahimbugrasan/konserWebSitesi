@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilet Satın Al</title>
+    <link rel="stylesheet" href="css/satınal.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Bilet Satın Al</h2>
+        <form action="odeme-islemi-url" method="POST">
+            <div class="form-section">
+                <label for="name">Ad Soyad:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Adres:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-section">
+                <label for="event">Etkinlik Seçin:</label>
+                <select id="event" name="event" required>
+                    <option value="konser1">Duman - Türkiye Turnesi - 18 Ocak 2025</option>
+                    <option value="konser2">Beyoncé - Renaissance Tour - 20 Ocak 2025</option>
+                    <option value="konser3">Sezen Aksu - Akustik Geceler - 12 Aralık 2024</option>
+                    <option value="konser4">The Weeknd – After Hours Tour - 5 Nisan 2025</option>
+                    <option value="konser5">Kenan Doğulu – Yaz Gecesi - 22 Mart 2025</option>
+                    <option value="konser6">Taylor Swift – Eras Tour - 15 Ocak 2025</option>
+                    <option value="konser7">Shakira – The Music of Shakira - 28 Şubat 2025</option>
+                    <option value="konser8">Ceza – Yavaş Yavaş Tour - 15 Ocak 2025</option>
+                    <option value="konser9">Sagopa K – Vakit Yaklaşır Tour - 25 Şubat 2025</option>
+                    <option value="konser10">Travis Scott – Utopia Tour - 10 Şubat 2025</option>
+                    <option value="konser11">Ben Fero – Dem Hoş Tour - 10 Mart 2025</option>
+                </select>
+
+                <label for="quantity">Bilet Adedi:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+
+                <label for="payment">Ödeme Bilgileri:</label>
+                <input type="text" id="card-name" name="card-name" placeholder="Kart Üzerindeki İsim" required>
+                <input type="text" id="card-number" name="card-number" placeholder="Kart Numarası" required>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="Son Kullanma Tarihi (MM/YY)" required>
+                <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+            </div>
+
+            <div class="form-footer">
+                <button type="submit" class="submit-btn">Ödemeyi Tamamla</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

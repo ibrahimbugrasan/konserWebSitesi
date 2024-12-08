@@ -1,0 +1,8 @@
+.noBtn{
+    
+    background: none;
+    border: none;
+    color: white; /* Metin rengi */
+    cursor: pointer;
+    padding: 0;
+}

@@ -1,0 +1,52 @@
+.menu-area-main li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .menu-area-main a {
+    display: block;
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* Menü alt (dropdown) stil */
+  .ulDD {
+    display: flex;
+    position: absolute;
+    top: 100%; /* Ana menü öğesinin hemen altında olacak */
+    left: 0;
+    background-color: #f0f8ff; /* Açılır menü için açık mavi arka plan */
+    padding: 0;
+    border-radius: 10px; /* Köşeleri yuvarlatmak */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
+    width: 180px; /* Menünün genişliği */
+    z-index: 1000; /* Diğer öğelerin önünde görünmesi için */
+    margin: 0;
+  }
+  
+  /* Alt menü öğeleri arasına siyah çizgi eklemek */
+  .ulDD li {
+    border-bottom: 1px solid #000;
+  }
+  
+  /* Son öğedeki çizgiyi kaldırmak */
+  .ulDD li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Alt menü öğeleri için stil */
+  .liDD a {
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .liDD a:hover {
+    background-color: #e0e0e0; /* Hover durumunda arka plan rengi */
+  }
+  
+  /* Ana menü öğesinin üzerine gelindiğinde dropdown menüsünü göstermek */
+  .menu-area-main li:hover > .ulDD {
+    display: block;
+  }
